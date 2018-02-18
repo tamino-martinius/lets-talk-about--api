@@ -1,0 +1,14 @@
+{
+  "name": "lets-talk-about---api",
+  "description": "Lets talk about ... API (of shyftplan)",
+  "author": "Tamino Martinius",
+  "homepage": "https://github.com/tamino-martinius/lets-talk-about--api",
+  "private": true,
+  "scripts": {
+    "start": "build-slides"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lets-talk-about--template": "^1.0.1"
+  }
+}
