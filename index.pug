@@ -641,18 +641,19 @@ html
             | API Playground
       article
         h2 Open inspector
-        h2 ⌘ + ⇧ + i
+        h2 ⌘ + ⌥ + i
       article
         h2 Fetch URL
         ul.build
           li
+            a(href='http://api.jquery.com/jQuery.get/') Read data
             pre $.get('{url}', console.log);
           li
+            a(href='http://api.jquery.com/jQuery.post/') Create data
             pre $.put('{url}', console.log);
           li
-            pre $.post('{url}', console.log);
-          li
-            pre $.delete('{url}', console.log);
+            a(href='http://api.jquery.com/jQuery.ajax/') Delete / Update data
+            pre $.ajax('{url}', { options });
       article
         h2 Save data
         ul.build
@@ -691,8 +692,5 @@ html
               | lets-talk-about--api.taminomartinius.de
       article.section
         h1 Questions?
-      article.section
-        h1
-          strike Questions?
 
     script(src='node_modules/lets-talk-about--template/assets/scripts/main.js')
