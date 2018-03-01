@@ -266,3 +266,11 @@ ul.horizontal li {
   --color-vignette: #765;
   --color-section-foreground: #fff;
 }
+ul.horizontal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+ul.horizontal pre {
+  text-align: left;
+}
