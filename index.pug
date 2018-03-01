@@ -632,6 +632,48 @@ html
           |   "break_time": 0      // Planned Shift Break Time
           | }
 
+      //- Bonus Track
+      article.section
+        h1 Bonus Track
+      article
+        h2
+          a(href='https://shyftplan.com/swagger')
+            | API Playground
+      article
+        h2 Open inspector
+        h2 ⌘ + ⇧ + i
+      article
+        h2 Fetch URL
+        ul.build
+          li
+            pre $.get('{url}', console.log);
+          li
+            pre $.put('{url}', console.log);
+          li
+            pre $.post('{url}', console.log);
+          li
+            pre $.delete('{url}', console.log);
+      article
+        h2 Save data
+        ul.build
+          li
+            pre var data;
+          li
+            pre $.get('{url}', res => data = res);
+          li
+            pre data
+          li
+            pre data.items
+      article
+        h2 Play around
+        ul.build
+          li
+            pre _.pluck(data.items, 'id')
+          li
+            pre _.groupBy(data.items, 'state')
+          li
+            pre _.sum(data.items, 'total_payment')
+
       //- End
       article.image(data-src="node_modules/lets-talk-about--template/assets/memes/all-the-things.jpg")
         h1 &nbsp;
