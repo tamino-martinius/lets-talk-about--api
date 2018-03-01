@@ -451,6 +451,187 @@ html
         h2
           a(href='https://shyftplan.com/swagger')
             | API Playground
+
+      //- At shyftplan
+      article.section
+        h1 At shyftplan
+      article
+        h2 Models
+      article
+        h2 User
+        ul.build
+          li Stores the login data
+      article
+        h2 User
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | {
+          |   "id": 1337,             // Id of User
+          |   "email": "tamino@...",  // Login mail address
+          |   "created_at": ...,
+          |   "updated_at": ...,      // Timestamps
+          |   "deleted_at": ...
+          | }
+      article
+        h2 Employment
+        ul.build
+          li Connects <em>Company</em>s with <em>User</em>s
+      article
+        h2 Employment
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of Employment
+          | "user_id": 4711,        // Id of User
+          | "company_id": 54,       // Id of Company
+          | "is_employee": true,    // Is the user an employee?
+          | "is_stakeholder": true, // Is the user an stakeholder?
+          | "first_name": "Foo",    // First Name
+          | "last_name": "Bar",     // Last Name
+      article
+        h2 Position
+        ul.build
+          li Every <em>Company</em> can have multiple <em>Position</em>s.
+      article
+        h2 Position
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of Position
+          | "company_id": 54,       // Id of Company
+          | "name": "Foo",          // Position Name
+          | "description": "",      // Descripton
+          | "color": "#aaeee1",     // Background color
+          | "sort": 13,             // Used to order them
+          | "text_color": "#000",   // Foreground color (black / white)
+          | "note": ""              // Position Note
+      article
+        h2 Location
+        ul.build
+          li Every <em>Company</em> can have multiple <em>Location</em>s.
+      article
+        h2 Location
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of Location
+          | "company_id": 54,       // Id of Company
+          | "name": "Foo",          // Position Name
+          | "sort": 13,             // Used to order them
+      article
+        h2 LocationsPosition
+        ul.build
+          li Connects <em>Location</em>s with <em>Positions</em>s.
+      article
+        h2 LocationsPosition
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of LocationsPosition
+          | "location_id": 4711,    // Id of Location
+          | "position_id": 815,     // Id of Position
+          | "sort": 13,             // Used to order them
+      article
+        h2 EmploymentsPosition
+        ul.build
+          li Connects <em>Employment</em>s with <em>LoctionsPosition</em>s.
+      article
+        h2 EmploymentsPosition
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of EmploymentsPosition
+          | "employment_id": 4711,  // Id of Location
+          | "locations_position_id": 815, // Id of LoctionsPosition
+      article
+        h2 Shiftplan
+        ul.build
+          li Collection of <em>Shift</em>s and related to an <em>Location</em>.
+      article
+        h2 Shiftplan
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of Shiftplan
+          | "location_id": 58,      // Id of Location
+          | "starts_at": "yyyy-mm-dd", // Shiftplan goes from this date
+          | "ends_at": "yyyy-mm-dd",   // to this date (both included)
+          | "state": "published",   // State (published/unpublished)
+          | "name": "Foo",          // Shiftplan name
+      article
+        h2 Shift
+        ul.build
+          li Defines an working slot for an defined amount of <em>Employment</em>s.
+          li A shift is connected to an <em>Position</em> on the <em>Shiftplan</em>s <em>Location</em>.
+      article
+        h2 Shift
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of Shift
+          | "shiftplan_id": 4711,   // Id of Shiftplan
+          | "locations_position_id": 815, // Id of LocationsPosition
+          | "starts_at": "...",     // Shift goes from this time
+          | "ends_at": "...",       // to this time (ISO 8601 format)
+          | "workers": 1,           // Maximum amount of workers
+          | "break_time": 0,        // Duration of breaks (in minutes)
+          | "can_evaluate": true,   // Can be evaluated by employees
+          | "note": null,           // Shift Note
+          | "untimed": false,       // If shifts time counted?
+          | "manager_note": null    // Manager Note
+      article
+        h2 StaffShift
+        ul.build
+          li Connects <em>Employment</em>s with <em>Shift</em>s.
+      article
+        h2 StaffShift
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of StaffShift
+          | "shift_id": 4711,       // Id of Shift
+          | "employment_id": 815,   // Id of Employment
+          | "state": "no_evaluation", // Current Evaluation state
+          |                           // - no_evaluation
+          |                           // - done_evaluation
+          |                           // - needs_evaluation
+          |                           // - punchtimed
+          |                           // - no_show
+          | "total_minutes": 241,   // Working time (without break)
+          | "total_payment": 50.21  // Sum of all payments
+      article
+        h2 Request
+        ul.build
+          li Connects <em>Employment</em>s with <em>Shift</em>s.
+      article
+        h2 Request
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of Request
+          | "shift_id": 4711,       // Id of Shift
+          | "employment_id": 815,   // Id of Employment
+          | "type": "StaffRequest"  // Type of Request
+          |                         // - StaffRequest
+          |                         // - ChangeRequest
+      article
+        h2 Evaluation
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "id": 1337,             // Id of StaffShift
+          | "shift_id": 4711,       // Id of Shift
+          | "employment_id": 815,   // Id of Employment
+          | "locations_position_id": 54, // Id of LocationsPosition
+          | "shiftplan_id": 136,    // Id of Shiftplan
+          | "location_id": 58,      // Id of Location
+          | "position_id": 96,      // Id of Position
+          | "user_id": 405,         // Id of User
+          | "first_name": "Foo",    // First Name of Employment
+          | "last_name": "Bar",     // Last Name of Employment
+      article
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "evaluation_starts_at": ..., // Evaluated Start of Shift
+          | "evaluation_ends_at": ...,   // Evaluated End of Shift
+          | "evaluation_break": 0,       // Break time in minutes
+          | "evaluation_duration": 330,  // Working time in minutes
+          | "state": "no_evaluation",    // State of Evaluation
+          | "shift_note": null,               // Shift note
+          | "admin_evaluation_note": null,    // Stakeholder Note
+          | "employee_evaluation_note": null, // Employee Note
+      article
+        pre(style='font-size: 2.5vw; line-height: 3vw;')
+          | "position": {
+          |   "name": "Foo"        // Position Name
+          | },
+          | "location": {
+          |   "name": "Bar"        // Location Name
+          | },
+          | "shift": {
+          |   "starts_at": ...,    // Planned Shift Start
+          |   "ends_at": ...,      // Planned Shift End
+          |   "break_time": 0      // Planned Shift Break Time
+          | }
+
       article.section
         h1 Questions?
 
