@@ -380,6 +380,77 @@ html
           |   "can_evaluate": true,
           |   "note": "We need to do a release today"
           | }
+      article
+        h2 How to get the data?
+      article
+        h2
+          a(href='https://shyftplan.com/swagger')
+            | API Playground
+      article
+        h2 API Action
+        ul.build
+          li HTTP Method
+          li URL
+          li Parameters
+      article
+        h2 HTTP Method
+        ul.build
+          li
+            pre POST        // create
+          li
+            pre GET         // read
+          li
+            pre PUT / PATCH // update
+          li
+            pre DELETE      // delete
+      article
+        h2 URL
+        ul.build
+          li
+            pre POST   /api/v1/shifts
+          li
+            pre GET    /api/v1/shifts
+          li
+            pre GET    /api/v1/shifts/{id}
+          li
+            pre PUT    /api/v1/shifts/{id}
+          li
+            pre DELETE /api/v1/shifts/{id}
+      article
+        h2 Parameters
+        ul.build
+          li
+            pre(style='font-size: 2.5vw')
+              | ?key1={value1}&key2={value2}&key3={value3}
+          li
+            pre(style='font-size: 2.5vw')
+              | ?user_email={email}&authentication_token={token}
+          li
+            pre(style='font-size: 2.5vw')
+              | ?ids[]={id1}&ids[]={id2}
+      article
+        h2
+          a(href='https://shyftplan.com/swagger')
+            | API Playground
+      article
+        h2 Authentication
+        ul.build
+          li Needed for every call
+          li With Email
+      article
+        h2 Authentication
+        ul
+          li Needed for every call
+          li With Email & Authentication Token
+      article
+        h2 Authentication Token
+        ul.build
+          li Can be generated on Employment Profile
+          li Or can be fetched with Email and Password
+      article
+        h2
+          a(href='https://shyftplan.com/swagger')
+            | API Playground
       article.section
         h1 Questions?
 
