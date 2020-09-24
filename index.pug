@@ -1,12 +1,8 @@
-doctype html
 html
   head
       title Lets talk about ... API (of shyftplan)
       meta(charset='utf-8')
-      script
-        | window.PERMANENT_URL_PREFIX = window.PERMANENT_URL_PREFIX || 'node_modules/lets-talk-about--template/assets/vendor/';
-      script(src='node_modules/lets-talk-about--template/assets/vendor/slides.js')
-      link(href='styles.css'  rel='stylesheet' type='text/css')
+      link(href='styles.styl'  rel='stylesheet' type='text/css')
   body
     section.slides.layout-regular.template-default
       article.build
@@ -36,38 +32,38 @@ html
         h2 Import Data
         ul.build.horizontal
           li
-            img(src='/images/logo-excel.svg' style='width: 30vw;')
+            img(src='/assets/logo-excel.svg' style='width: 30vw;')
           li
             h1 ▶
           li
-            img(src='/images/logo-shyftplan.svg' style='width: 30vw;')
+            img(src='/assets/logo-shyftplan.svg' style='width: 30vw;')
       article
         h2 Export Data
         ul.horizontal
           li
-            img(src='/images/logo-excel.svg' style='width: 30vw;')
+            img(src='/assets/logo-excel.svg' style='width: 30vw;')
           li
             h1 ◀
           li
-            img(src='/images/logo-shyftplan.svg' style='width: 30vw;')
+            img(src='/assets/logo-shyftplan.svg' style='width: 30vw;')
       article
         h2 Write Commands
         ul.horizontal
           li
-            img(src='/images/logo-slack.svg' style='width: 30vw;')
+            img(src='/assets/logo-slack.svg' style='width: 30vw;')
           li
             h1 ▶
           li
-            img(src='/images/logo-shyftplan.svg' style='width: 30vw;')
+            img(src='/assets/logo-shyftplan.svg' style='width: 30vw;')
       article
         h2 Add notifications
         ul.horizontal
           li
-            img(src='/images/logo-slack.svg' style='width: 30vw;')
+            img(src='/assets/logo-slack.svg' style='width: 30vw;')
           li
             h1 ◀
           li
-            img(src='/images/logo-shyftplan.svg' style='width: 30vw;')
+            img(src='/assets/logo-shyftplan.svg' style='width: 30vw;')
 
       //- Why
       article.section
@@ -77,21 +73,22 @@ html
       article.build
         h2 UI
         h2 (User Interface)
-      article.image(data-src='/images/ui-shift.png')
+      article
+        img.bg(src='/assets/ui-shift.png')
       article
         ul.horizontal
           li
-            img(src='/images/ui-shift-info.jpg' style='width: 50vw;')
+            img(src='/assets/ui-shift-info.jpg' style='width: 50vw;')
           li &nbsp;
       article
         ul.horizontal
           li
-            img(src='/images/ui-shift-info-2.jpg' style='width: 50vw;')
+            img(src='/assets/ui-shift-info-2.jpg' style='width: 50vw;')
           li &nbsp;
       article
         ul.horizontal
           li
-            img(src='/images/ui-shift-info-2.jpg' style='width: 50vw;')
+            img(src='/assets/ui-shift-info-2.jpg' style='width: 50vw;')
           li
             pre(style='font-size: 2vw')
               | // ISO 8601
@@ -99,12 +96,12 @@ html
       article
         ul.horizontal
           li
-            img(src='/images/ui-shift-info-1.jpg' style='width: 50vw;')
+            img(src='/assets/ui-shift-info-1.jpg' style='width: 50vw;')
           li &nbsp;
       article
         ul.horizontal
           li
-            img(src='/images/ui-shift-info-1.jpg' style='width: 50vw;')
+            img(src='/assets/ui-shift-info-1.jpg' style='width: 50vw;')
           li
             pre
               | 33291
@@ -118,12 +115,12 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info.jpg' style='width: 40vw;')
           li(style='width: 55vw;') &nbsp;
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -132,7 +129,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-1.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-1.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -141,7 +138,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-1.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-1.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -151,7 +148,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-2.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-2.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -161,7 +158,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-2.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-2.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -172,7 +169,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-3.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-3.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -183,7 +180,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-3.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-3.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -195,7 +192,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-4.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-4.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -207,7 +204,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-info-4.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-info-4.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -220,7 +217,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-settings.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-settings.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -233,7 +230,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-settings-1.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-settings-1.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -246,7 +243,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-settings-1.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-settings-1.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -260,7 +257,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-note.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-note.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -274,7 +271,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-note-1.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-note-1.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -288,7 +285,7 @@ html
       article
         ul.horizontal
           li(style='width: 40vw;')
-            img(src='/images/ui-shift-note-1.jpg' style='width: 40vw;')
+            img(src='/assets/ui-shift-note-1.jpg' style='width: 40vw;')
           li(style='width: 55vw;')
             pre(style='font-size: 1.7vw')
               | {
@@ -673,7 +670,8 @@ html
             pre _.sum(data.items, 'total_payment')
 
       //- End
-      article.image(data-src="node_modules/lets-talk-about--template/assets/memes/all-the-things.jpg")
+      article
+        img.bg(src="node_modules/lets-talk-about--template/assets/memes/all-the-things.jpg")
         h1 &nbsp;
         h1 Thats it
       article
@@ -690,4 +688,4 @@ html
       article.section
         h1 Questions?
 
-    script(src='node_modules/lets-talk-about--template/assets/scripts/main.js')
+    script(src='node_modules/lets-talk-about--template/main.js')
